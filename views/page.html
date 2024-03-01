@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprenticeship Programme</title>
+    <script src="/javascripts/api.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.11/lottie.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+
+  </head>
+  <body>
+    <body data-bs-spy="scroll">
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <div
+          class="d-flex d-inline justify-content-between align-items-end w-100">
+          <div class="col-10">
+            <a class="navbar-brand text-white ms-3" href="#">HARBOUR SPACE</a>
+            <a class="text-white navbar-text" href="#">/INTERACTION DESIGN</a>
+          </div>
+          <div class="col-auto">
+            <span class="material-icons">menu</span>
+          </div>
+          <div class="circular-div"><b>Apply Now</b></div>
+        </div>
+      </nav>
+
+      <!-- Main Body -->
+
+      <div class="main-body " data-bs-spy="scroll">
+        <!-- First Component-->
+        <div class="row justify-content-around p-5">
+          <div class="col-md-6 col-s-12 order-1 order-md-0 p-3">
+            <h1 class="display-4" id="scholarship-name"></h1>
+            <div id="animation-container"></div>
+
+          </div>
+          <div class="col-md-4 col-s-12 order-2 order-md-1 ">
+            <div class="row mt-3">
+              <div class="col-6 "
+                id="company_logo_container"><img id="company_logo"></div>
+              <div class="col-5 ">
+                <h3 class="text-muted">powered by</h3>
+                <p class="company" id="company_name"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-around p-4">
+          <div
+            class="col-md-6 col-s-12 order-4 order-md-2 ps-3 pe-3">
+            <br>
+            <h2>A fully funded work-study program to launch your tech career
+            </h2>
+            <br>
+            <p id="scholarship-description"></p>
+            <br>
+            <br>
+            <h2 class="d-inline mt-5">Position:<p class="d-inline">Marketing
+                Performance</p></h2>
+            <br><br>
+            <button type="button"><b>Apply Now</b></button>
+
+          </div>
+          <div class="col-md-5 col-s-12order-3 order-md-3">
+            <div class="col justify-content-between">
+              <div class="row ps-5 pe-5 pt-4 mt-1  border border-secondary">
+                <h4>Application closes in</h4>
+                <h5>6 Days : 22 Hrs : 56 Min : 13 Seg</h5>
+              </div>
+              <div class="row p-5 mt-1 border border-secondary">
+                <div class="row">
+                  <div class="col-6 ">
+                    <h4>Location</h4>
+                    <p id="location"></p>
+                  </div>
+                  <div class="col-6 ">
+                    <h4>Duration</h4>
+                    <p id="duration"></p>
+                  </div> </div>
+                <div class="row ">
+                  <div class="col-6 ">
+                    <h4>Start Date</h4>
+                    <p id="startdate"></p>
+                  </div>
+                  <div class="col-6 ">
+                    <h4>End Date</h4>
+                    <p id="enddate"></p>
+                  </div> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Second Component-->
+
+        <div class="row justify-content-around  pt-5">
+          <div
+            class="col-md-5 p-3  d-flex justify-content-center align-items-center">
+            <div class="circular-background">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/e56a/9c57/b62b349e905d595a94a6ecb5ec2d755f?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YKJTgvNHE9UmQ-~CiRH2SCPfZ96-aBqtm7RbmhsGiLqIWdOD4odvQLUuxg1VMKQT7AIA-POMkYgMdolFe2D~Fft69DhjnvwO9eoV~DBFZx8Ypy6b6grjjQ6Lm6774XEcpX0ww5P3kJzzTmun4CqXoBf-Bn9bKGSE1uQwx-32FElbwmZK7wjkIPAwaEUqwv9d9Di-j3ZXJLtb7Ituk-SjW6JmSR-LtkCAZtEuGVuVqTZgKZ0-OKUH5nn9u235dBFBYyW7wSMAzFpgKE11hGLMs5RvZYS-y1QmcEym2nyOF-DftNbIIvKTmN17b4QcdHGC8jrEpqZm9ZNfQ8qyEfyBXg__"
+                alt="Small SVG">
+            </div>
+          </div>
+          <div class="col-md-5">
+            <h1 class="display-4">About the apprenticeship</h1>
+            <br><br>
+            <p id="about"></p>
+          </div>
+        </div>
+        <br><br>
+        <div class="row justify-content-between">
+          <div
+            class="col-md-4 order-4 order-md-2 border border-secondary justify-content-between p-5">
+            <br>
+            <h4>Scholarship Value</h4>
+            <h6 class="display-6" id="totalval"></h6>
+            <br><br><br><br><hr>
+            <div class="row">
+              <div class="col">
+                <h4>Tution Covered</h4>
+                <p id="tuition"></p>
+                <h4>Living Stipend</h4>
+                <p id="liv_exp_mon"></p>
+              </div>
+              <div class="col">
+                <h4>Remaining</h4>
+                <p id="remain"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 order-3 order-md-3 ">
+            <div class="col justify-content-between">
+              <div class="row border border-secondary">
+                <div class="col-md-6 p-5 col-sm-12">
+                  <h4>Study Commitment</h4>
+                  <h5 id="study-com"></h5><br>
+                  <p id="study_text"><br></p>
+                </div>
+                <div class="col-md-6 col-sm-12 p-5">
+                  <h4>Internship Commitment</h4>
+                  <h5 id="intern-com"></h5><br>
+                  <p id="intern-text"><br></p>
+                </div>
+              </div>
+
+              <h2 class="divider line one-line">Graduation</h2>
+              <div class="row mt-1 border border-secondary">
+                <div class="row p-5">
+                  <h4>Work Commitment</h4>
+                  <h5 id="work-com"></h5><br>
+                  <p id="work-dur"><br></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FThird Component-->
+
+      <div class="box "></div>
+      <div class="overlay">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card p-3">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/e56a/9c57/b62b349e905d595a94a6ecb5ec2d755f?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YKJTgvNHE9UmQ-~CiRH2SCPfZ96-aBqtm7RbmhsGiLqIWdOD4odvQLUuxg1VMKQT7AIA-POMkYgMdolFe2D~Fft69DhjnvwO9eoV~DBFZx8Ypy6b6grjjQ6Lm6774XEcpX0ww5P3kJzzTmun4CqXoBf-Bn9bKGSE1uQwx-32FElbwmZK7wjkIPAwaEUqwv9d9Di-j3ZXJLtb7Ituk-SjW6JmSR-LtkCAZtEuGVuVqTZgKZ0-OKUH5nn9u235dBFBYyW7wSMAzFpgKE11hGLMs5RvZYS-y1QmcEym2nyOF-DftNbIIvKTmN17b4QcdHGC8jrEpqZm9ZNfQ8qyEfyBXg__"
+                  alt="Small SVG" class="card-img-top">
+                <div class="card-body">
+                  <div class="title-wrapper">
+                    <h5 class="card-title">Irene Pereyra</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Interaction Design
+                      Fellow '19 <i class="fa fa-linkedin"
+                        aria-hidden="true"></i>
+
+                    </h6>
+                  </div>
+                  <p class="card-text ps-5 pe-5">This Fellowship was a turning
+                    point
+                    in my career. I wouldn't be where I am today without the
+                    financial support and experienced offered through the
+                    program.</p>
+                  <br>
+                  <p class="blockquote-footer ps-5 pe-5"><small>Education BA
+                      Visual design</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card p-3">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/e56a/9c57/b62b349e905d595a94a6ecb5ec2d755f?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YKJTgvNHE9UmQ-~CiRH2SCPfZ96-aBqtm7RbmhsGiLqIWdOD4odvQLUuxg1VMKQT7AIA-POMkYgMdolFe2D~Fft69DhjnvwO9eoV~DBFZx8Ypy6b6grjjQ6Lm6774XEcpX0ww5P3kJzzTmun4CqXoBf-Bn9bKGSE1uQwx-32FElbwmZK7wjkIPAwaEUqwv9d9Di-j3ZXJLtb7Ituk-SjW6JmSR-LtkCAZtEuGVuVqTZgKZ0-OKUH5nn9u235dBFBYyW7wSMAzFpgKE11hGLMs5RvZYS-y1QmcEym2nyOF-DftNbIIvKTmN17b4QcdHGC8jrEpqZm9ZNfQ8qyEfyBXg__"
+                  alt="Small SVG" class="card-img-top">
+                <div class="card-body">
+                  <div class="title-wrapper">
+                    <h5 class="card-title">Irene Pereyra</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Interaction Design
+                      Fellow '19 <i class="fa fa-linkedin"
+                        aria-hidden="true"></i>
+
+                    </h6>
+                  </div>
+                  <p class="card-text ps-5 pe-5">This Fellowship was a turning
+                    point
+                    in my career. I wouldn't be where I am today without the
+                    financial support and experienced offered through the
+                    program.</p>
+                  <br>
+                  <p class="blockquote-footer ps-5 pe-5"><small>Education BA
+                      Visual design</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card p-3">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/e56a/9c57/b62b349e905d595a94a6ecb5ec2d755f?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YKJTgvNHE9UmQ-~CiRH2SCPfZ96-aBqtm7RbmhsGiLqIWdOD4odvQLUuxg1VMKQT7AIA-POMkYgMdolFe2D~Fft69DhjnvwO9eoV~DBFZx8Ypy6b6grjjQ6Lm6774XEcpX0ww5P3kJzzTmun4CqXoBf-Bn9bKGSE1uQwx-32FElbwmZK7wjkIPAwaEUqwv9d9Di-j3ZXJLtb7Ituk-SjW6JmSR-LtkCAZtEuGVuVqTZgKZ0-OKUH5nn9u235dBFBYyW7wSMAzFpgKE11hGLMs5RvZYS-y1QmcEym2nyOF-DftNbIIvKTmN17b4QcdHGC8jrEpqZm9ZNfQ8qyEfyBXg__"
+                  alt="Small SVG" class="card-img-top">
+                <div class="card-body">
+                  <div class="title-wrapper">
+                    <h5 class="card-title">Irene Pereyra</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Interaction Design
+                      Fellow '19 <i class="fa fa-linkedin"
+                        aria-hidden="true"></i>
+
+                    </h6>
+                  </div>
+                  <p class="card-text ps-5 pe-5">This Fellowship was a turning
+                    point
+                    in my career. I wouldn't be where I am today without the
+                    financial support and experienced offered through the
+                    program.</p>
+                  <br>
+                  <p class="blockquote-footer ps-5 pe-5"><small>Education BA
+                      Visual design</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card p-3">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/e56a/9c57/b62b349e905d595a94a6ecb5ec2d755f?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YKJTgvNHE9UmQ-~CiRH2SCPfZ96-aBqtm7RbmhsGiLqIWdOD4odvQLUuxg1VMKQT7AIA-POMkYgMdolFe2D~Fft69DhjnvwO9eoV~DBFZx8Ypy6b6grjjQ6Lm6774XEcpX0ww5P3kJzzTmun4CqXoBf-Bn9bKGSE1uQwx-32FElbwmZK7wjkIPAwaEUqwv9d9Di-j3ZXJLtb7Ituk-SjW6JmSR-LtkCAZtEuGVuVqTZgKZ0-OKUH5nn9u235dBFBYyW7wSMAzFpgKE11hGLMs5RvZYS-y1QmcEym2nyOF-DftNbIIvKTmN17b4QcdHGC8jrEpqZm9ZNfQ8qyEfyBXg__"
+                  alt="Small SVG" class="card-img-top">
+                <div class="card-body">
+                  <div class="title-wrapper">
+                    <h5 class="card-title">Irene Pereyra</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Interaction Design
+                      Fellow '19 <i class="fa fa-linkedin"
+                        aria-hidden="true"></i>
+
+                    </h6>
+                  </div>
+                  <p class="card-text ps-5 pe-5">This Fellowship was a turning
+                    point
+                    in my career. I wouldn't be where I am today without the
+                    financial support and experienced offered through the
+                    program.</p>
+                  <br>
+                  <p class="blockquote-footer ps-5 pe-5"><small>Education BA
+                      Visual design</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Custom Cursor -->
+      <div class="custom-cursor">Drag</div>
+      <!-- Fourth Component-->
+      <div class="main-body">
+        <div class="row container justify-content-between">
+          <div class="col-md-5 order-1 order-md-0">
+            <h1 class="display-4">Frequently Asked Questions</h1>
+          </div>
+          <div class="col-md-5 order-2 order-md-1 p-5 justify-self-end">
+            <p class="d-inline">Filtered by</p>
+            <div class="btn-group">
+              <button type="button"
+                class="btn btn-outline-secondary dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Application Process
+              </button>
+              <ul class="dropdown-menu">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class="accordion accordion-flush pb-5 mb-5" id="accordionFlushExample">
+        </div>
+      </div>
+        <!-- Footer-->
+
+      <footer class="sticky-bottom">
+        <table class="p-5">
+          <thead>
+            <tr>
+              <th id="th"></th>
+              <th>Location</th>
+              <th>Duration</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Application Closes in</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Marketing Performance</td>
+              <td id="d1"></td>
+              <td id="d2"></td>
+              <td id="d3"></td>
+              <td id="d4"></td>
+              <td> 6 Days : 22 Hrs : 56 Min : 13 Seg
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </footer>
+    </body>
+
+  </html>
